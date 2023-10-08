@@ -32,6 +32,7 @@ celciusBtn.addEventListener("click", function () {
   windC = "km/hr";
   celciusBtn.classList.add("active");
   farenheitBtn.classList.remove("active");
+  fetchWeatherData();
   // if (celciusBtn.className =='active') {
   // 	tempC = '° C'
   // 	windC = 'km/hr'
@@ -46,22 +47,23 @@ farenheitBtn.addEventListener("click", function () {
   tempC = "° C";
   windC = "km/hr";
   farenheitBtn.classList.add("active");
-  celciusBtn.classList.remove("active");
   fetchWeatherData();
+  celciusBtn.classList.remove("active");
 
-  // if (farenheitBtn.className == 'active') {
-  // 	tempC = '° F'
-  // 	windC = 'miles/hr'
-  // 	console.log(windC)
-  // } else {
-  // 	tempC = '° C'
-  // 	windC = 'km/hr'
-  // }
+//   if (farenheitBtn.className == 'active') {
+//   	tempC = '° F'
+//   	windC = 'miles/hr'
+//   	console.log(windC)
+//   } else {
+//   	tempC = '° C'
+//   	windC = 'km/hr'
+//   }
 });
 
 function displayOnTheScreen(weather) {
   // console.log(weather)
   let tempVal = unit === "imperial" ? " °F" : " °C";
+//   let wind = unit === "imperial" ? " miles/hr" : " km/hr";
   locationName.innerText = weather.name;
   temp.innerText = `${Math.round(weather.main.temp)} ${tempVal}`;
   feels.innerText = weather.main.feels_like;

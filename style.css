@@ -36,16 +36,21 @@ body {
   height: 100vh;
   /* background: url("https://images.hdqwalls.com/wallpapers/forest-mountains-3v.jpg"); */
   background: url("https://images.hdqwalls.com/wallpapers/forest-mountains-3v.jpg")
-    no-repeat center center fixed;
-	 /* filter: brightness(20%); */
+    no-repeat center center fixed ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* filter: brightness(20%); */
   /* filter:contrast();  */
   /* background-color: black; */
   /* opacity: .15; */
   /* background-color: transparent; */
   /* prefers-color-scheme: dark; */
   position: relative;
-      /* transform: scale(1.06); */
+  /* transform: scale(1.06); */
 
+  filter: brightness(0.7) contrast(0.7); /* Adjust values for darkness and contrast */
 }
 .container {
   width: 70%;
@@ -112,8 +117,7 @@ button {
   border: none;
   cursor: pointer;
   font-size: 25px;
-    border-radius: 10px;
-
+  border-radius: 10px;
 }
 
 button:hover,
